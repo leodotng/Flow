@@ -1,9 +1,11 @@
 {
-  "name": "flow",
+  "name": "my-project",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
+    "build": "babel src/ -d lib/",
+    "prepublish": "yarn run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -11,6 +13,7 @@
   "devDependencies": {
     "@babel/cli": "^7.12.1",
     "@babel/core": "^7.12.3",
-    "@babel/preset-flow": "^7.12.1"
+    "@babel/preset-flow": "^7.12.1",
+    "flow-bin": "^0.137.0"
   }
 }
